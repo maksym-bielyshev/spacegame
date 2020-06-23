@@ -1,4 +1,7 @@
 import pygame
 
 # Set the width and height of the screen.
-screen.size = [360, 600]
+screen_size = [360, 600]
+
+# Create a screen to display a game.
+screen = pygame.display.set_mode(screen_size)
