@@ -12,6 +12,9 @@ background = pygame.image.load('background.png')
 # Load the planet image.
 planet = pygame.image.load('p_one.png')
 
+# Load the spaceship image.
+spaceship = pygame.image.load('spaceship.png')
+
 # Set the default condition for loop.
 keep_alive = True
 
@@ -23,6 +26,9 @@ while keep_alive:
 
     # Display planet image.
     screen.blit(planet, [140, 50])
+
+    # Display spaceship image.
+    screen.blit(spaceship, [160, 500])
 
     # Update the display at each iteration to change image positions.
     pygame.display.update()
