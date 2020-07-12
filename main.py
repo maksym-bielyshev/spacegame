@@ -15,6 +15,9 @@ planet = pygame.image.load('p_one.png')
 # Load the spaceship image.
 spaceship = pygame.image.load('spaceship.png')
 
+# Load the bullet image.
+bullet = pygame.image.load('bullet.png')
+
 # Set the default condition for loop.
 keep_alive = True
 
@@ -26,6 +29,9 @@ while keep_alive:
 
     # Display planet image.
     screen.blit(planet, [140, 50])
+
+    # Display bullet image.
+    screen.blit(bullet, [180, 500])
 
     # Display spaceship image.
     screen.blit(spaceship, [160, 500])
