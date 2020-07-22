@@ -22,6 +22,14 @@ bullet = pygame.image.load('bullet.png')
 keep_alive = True
 
 while keep_alive:
+    # Access keyboard events.
+    pygame.event.get()
+
+    # Returns a list of all the keys.
+    # The value of every key will be False.
+    # Only the button user pressed will be True.
+    keys = pygame.key.get_pressed()
+
     # Set the top side of the image to align with the top of the screen.
     # And the left side of the image aligns with the left side of the screen.
     # (blit - block image transfer)
