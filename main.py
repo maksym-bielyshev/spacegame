@@ -46,3 +46,8 @@ while keep_alive:
 
     # Update the display at each iteration to change image positions.
     pygame.display.update()
+
+    # If the value of the space key is True, the user pressed that keyboard
+    # key. It would be False for every other key in the keyboard.
+    if keys[pygame.K_SPACE] == True:
+        print("Space key pressed")
