@@ -12,6 +12,10 @@ background = pygame.image.load('background.png')
 # Load the planet image.
 planet = pygame.image.load('p_one.png')
 
+# Add planet_x and move direction.
+planet_x = 140
+move_direction = 'right'
+
 # Load the spaceship image.
 spaceship = pygame.image.load('spaceship.png')
 
