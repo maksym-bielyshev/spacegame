@@ -55,3 +55,12 @@ while keep_alive:
     # key. It would be False for every other key in the keyboard.
     if keys[pygame.K_SPACE] == True:
         print("Space key pressed")
+
+    if move_direction == 'right':
+        planet_x = planet_x + 5
+        if planet_x == 300:
+            move_direction = 'left'
+    else:
+        planet_x = planet_x - 5
+        if planet_x == 0:
+            move_direction = 'right'
