@@ -41,6 +41,7 @@ while keep_alive:
     # If the value of the space key is True, the user pressed that keyboard
     # key. It would be False for every other key in the keyboard.
     if keys[pygame.K_SPACE] == True:
+        fired = True
         print("Space key pressed")
 
     if move_direction == 'right':
