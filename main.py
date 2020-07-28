@@ -68,7 +68,7 @@ while keep_alive:
     screen.blit(planet, [planet_x, 50])
 
     # Display bullet image.
-    screen.blit(bullet, [180, 500])
+    screen.blit(bullet, [180, bullet_y])
 
     # Display spaceship image.
     screen.blit(spaceship, [160, 500])
