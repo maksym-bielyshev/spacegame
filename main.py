@@ -22,6 +22,10 @@ spaceship = pygame.image.load('spaceship.png')
 # Load the bullet image.
 bullet = pygame.image.load('bullet.png')
 
+# Add bullet_y and fired value.
+bullet_y = 500
+fired = False
+
 # Set the default condition for loop.
 keep_alive = True
 
