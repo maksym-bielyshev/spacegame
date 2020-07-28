@@ -53,6 +53,12 @@ while keep_alive:
         if planet_x == 0:
             move_direction = 'right'
 
+    if fired is True:
+        bullet_y = bullet_y - 5
+        if bullet_y == 50:
+            fired = False
+            bullet_y = 500
+
     # Set the top side of the image to align with the top of the screen.
     # And the left side of the image aligns with the left side of the screen.
     # (blit - block image transfer)
