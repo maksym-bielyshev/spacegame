@@ -26,6 +26,8 @@ bullet = pygame.image.load('bullet.png')
 bullet_y = 500
 fired = False
 
+clock = pygame.time.Clock()
+
 # Set the default condition for loop.
 keep_alive = True
 
@@ -75,3 +77,6 @@ while keep_alive:
 
     # Update the display at each iteration to change image positions.
     pygame.display.update()
+
+    # Set 60 frames per second.
+    clock.tick(60)
