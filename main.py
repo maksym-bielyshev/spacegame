@@ -75,6 +75,10 @@ while keep_alive:
     # Display spaceship image.
     screen.blit(spaceship, [160, 500])
 
+    # React to a bullet and a planet collision.
+    if bullet_y < 80 and planet_x > 120 and planet_x < 180:
+        print('BOOM')
+
     # Update the display at each iteration to change image positions.
     pygame.display.update()
 
