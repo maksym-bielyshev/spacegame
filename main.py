@@ -81,6 +81,13 @@ while keep_alive:
 
     # React to a bullet and a planet collision.
     if bullet_y < 80 and planet_x > 120 and planet_x < 180:
+        p_index = p_index + 1
+        if p_index < len(planets):
+            planet = pygame.image.load(planets[p_index])
+            planet_x = 10
+        else:
+            print('YOU WIN')
+            keep_alive = False
         print('BOOM')
 
     # Update the display at each iteration to change image positions.
