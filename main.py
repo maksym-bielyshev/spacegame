@@ -9,6 +9,10 @@ screen = pygame.display.set_mode(screen_size)
 # Set the background image.
 background = pygame.image.load('background.png')
 
+# Add planets list and planet index.
+planets = ['p_one.png', 'p_two.png', 'p_three.png']
+p_index = 0
+
 # Load the planet image.
 planet = pygame.image.load('p_one.png')
 
