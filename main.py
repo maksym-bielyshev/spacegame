@@ -14,7 +14,7 @@ planets = ['p_one.png', 'p_two.png', 'p_three.png']
 p_index = 0
 
 # Load the planet image.
-planet = pygame.image.load('p_one.png')
+planet = pygame.image.load(planets[p_index])
 
 # Add planet_x and move direction.
 planet_x = 140
