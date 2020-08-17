@@ -9,6 +9,16 @@ screen = pygame.display.set_mode(screen_size)
 # Set the background image.
 background = pygame.image.load('background.png')
 
+# Load the spaceship image.
+spaceship = pygame.image.load('spaceship.png')
+
+# Load the bullet image.
+bullet = pygame.image.load('bullet.png')
+
+# Add bullet_y and fired value.
+bullet_y = 500
+fired = False
+
 # Add planets list and planet index.
 planets = ['p_one.png', 'p_two.png', 'p_three.png']
 p_index = 0
@@ -20,20 +30,10 @@ planet = pygame.image.load(planets[p_index])
 planet_x = 140
 move_direction = 'right'
 
-# Load the spaceship image.
-spaceship = pygame.image.load('spaceship.png')
-
-# Load the bullet image.
-bullet = pygame.image.load('bullet.png')
-
-# Add bullet_y and fired value.
-bullet_y = 500
-fired = False
-
-clock = pygame.time.Clock()
-
 # Set the default condition for loop.
 keep_alive = True
+
+clock = pygame.time.Clock()
 
 while keep_alive:
     # Access keyboard events.
@@ -50,15 +50,6 @@ while keep_alive:
         fired = True
         print("Space key pressed")
 
-    if move_direction == 'right':
-        planet_x = planet_x + 5
-        if planet_x == 300:
-            move_direction = 'left'
-    else:
-        planet_x = planet_x - 5
-        if planet_x == 0:
-            move_direction = 'right'
-
     if fired is True:
         bullet_y = bullet_y - 5
         if bullet_y == 50:
@@ -70,14 +61,23 @@ while keep_alive:
     # (blit - block image transfer)
     screen.blit(background, [0, 0])
 
-    # Display planet image.
-    screen.blit(planet, [planet_x, 50])
-
     # Display bullet image.
     screen.blit(bullet, [180, bullet_y])
 
     # Display spaceship image.
     screen.blit(spaceship, [160, 500])
+
+    if move_direction == 'right':
+        planet_x = planet_x + 5
+        if planet_x == 300:
+            move_direction = 'left'
+    else:
+        planet_x = planet_x - 5
+        if planet_x == 0:
+            move_direction = 'right'
+
+    # Display planet image.
+    screen.blit(planet, [planet_x, 50])
 
     # React to a bullet and a planet collision.
     if bullet_y < 80 and planet_x > 120 and planet_x < 180:
